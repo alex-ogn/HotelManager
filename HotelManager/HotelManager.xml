@@ -1,0 +1,331 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>HotelManager</name>
+    </assembly>
+    <members>
+        <member name="T:HotelManager.Controllers.ClientsController">
+            <summary>
+            Manages clients in the system.
+            </summary>
+        </member>
+        <member name="M:HotelManager.Controllers.ClientsController.#ctor(HotelManager.Data.ApplicationDbContext)">
+            <summary>
+            Connects with the databse.
+            </summary>
+            <param name="context">Instance of the database.</param>
+        </member>
+        <member name="M:HotelManager.Controllers.ClientsController.Index">
+            <summary>
+            Shows all clients that are contained in the database.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.ClientsController.Details(System.Nullable{System.Int32})">
+            <summary>
+            Shows the details of an existing client from the database by ID.
+            </summary>
+            <param name="id">Unique client ID.</param>
+            <returns>An instance containing information about a client.</returns>
+        </member>
+        <member name="M:HotelManager.Controllers.ClientsController.Create">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.ClientsController.Create(HotelManager.Models.Client)">
+            <summary>
+            Adds a new client to the database.
+            </summary>
+            <param name="client">A model of a client.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.ClientsController.Edit(System.Nullable{System.Int32})">
+            <summary>
+            Edits information about a client by ID.
+            </summary>
+            <param name="id">Unique client ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.ClientsController.Edit(System.Int32,HotelManager.Models.Client)">
+            <summary>
+            Edits information about a client by ID and given model of one.
+            </summary>
+            <param name="id">Unique client ID.</param>
+            <param name="client">The model of an existing client.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.ClientsController.Delete(System.Nullable{System.Int32})">
+            <summary>
+            Deletes a client by ID.
+            </summary>
+            <param name="id">Unique client ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.ClientsController.DeleteConfirmed(System.Int32)">
+            <summary>
+            Deletes a client by ID.
+            </summary>
+            <param name="id">Unique client ID.</param>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManager.Controllers.HomeController">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:HotelManager.Controllers.HomeController._logger">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:HotelManager.Controllers.HomeController.#ctor(Microsoft.Extensions.Logging.ILogger{HotelManager.Controllers.HomeController})">
+            <summary>
+            
+            </summary>
+            <param name="logger"></param>
+        </member>
+        <member name="M:HotelManager.Controllers.HomeController.Index">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.HomeController.Privacy">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.HomeController.Error">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManager.Controllers.ReservationsController">
+            <summary>
+            Manages reservations in the system.
+            </summary>
+        </member>
+        <member name="M:HotelManager.Controllers.ReservationsController.#ctor(HotelManager.Data.ApplicationDbContext,Microsoft.AspNetCore.Identity.UserManager{HotelManager.Models.UserEmployee},Microsoft.AspNetCore.Identity.SignInManager{HotelManager.Models.UserEmployee})">
+            <summary>
+            Connects with the databse and creates manager for users and for signing in.
+            </summary>
+            <param name="context">Instance of the database.</param>
+            <param name="userManager">Manager for users.</param>
+            <param name="signInManager">Manager for signing in.</param>
+        </member>
+        <member name="M:HotelManager.Controllers.ReservationsController.Index">
+            <summary>
+            Shows all reservations that are contained in the database.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.ReservationsController.Details(System.Nullable{System.Int32})">
+            <summary>
+            Shows the details of an existing reservation from the database by ID.
+            </summary>
+            <param name="id">Unique reservation ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.ReservationsController.Create">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.ReservationsController.Create(HotelManager.Views.Reservations.Model.FullReservation)">
+            <summary>
+            Adds a new reservation to the database.
+            </summary>
+            <param name="fullreservation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.ReservationsController.Edit(System.Nullable{System.Int32})">
+            <summary>
+            Edits information about a reservation by ID.
+            </summary>
+            <param name="id">Unique reservation ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.ReservationsController.Edit(HotelManager.Views.Reservations.Model.FullReservation)">
+            <summary>
+            
+            </summary>
+            <param name="fullreservation"></param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.ReservationsController.Delete(System.Nullable{System.Int32})">
+            <summary>
+            Deletes a reservation by ID.
+            </summary>
+            <param name="id">Unique reservation ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.ReservationsController.DeleteConfirmed(System.Int32)">
+            <summary>
+            Deletes a reservation by ID.
+            </summary>
+            <param name="id">Unique reservation ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.ReservationsController.ReservationExists(System.Int32)">
+            <summary>
+            Checks if a reservation exists in the database.
+            </summary>
+            <param name="id">Unique reservation ID.</param>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManager.Controllers.RoomsController">
+            <summary>
+            Manages rooms in the system.
+            </summary>
+        </member>
+        <member name="M:HotelManager.Controllers.RoomsController.#ctor(HotelManager.Data.ApplicationDbContext)">
+            <summary>
+            Connects with the databse.
+            </summary>
+            <param name="context">Instance of the database.</param>
+        </member>
+        <member name="M:HotelManager.Controllers.RoomsController.Index">
+            <summary>
+            Shows all rooms that are contained inthe database.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.RoomsController.Details(System.Nullable{System.Int32})">
+            <summary>
+            Shows the details of an existing room from the database by ID.
+            </summary>
+            <param name="id">Unique room ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.RoomsController.Create(HotelManager.Models.Room)">
+            <summary>
+            Adds a new room to the database.
+            </summary>
+            <param name="room">A model of a room.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.RoomsController.Edit(System.Nullable{System.Int32})">
+            <summary>
+            Edits information about a room by ID.
+            </summary>
+            <param name="id">Unique room ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.RoomsController.Edit(System.Int32,HotelManager.Models.Room)">
+            <summary>
+            Edits information about a room by ID and given model.
+            </summary>
+            <param name="id">Unique room ID.</param>
+            <param name="room">The model of an existing room.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.RoomsController.Delete(System.Nullable{System.Int32})">
+            <summary>
+            Deletes a room by ID.
+            </summary>
+            <param name="id">Unique room ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.RoomsController.DeleteConfirmed(System.Int32)">
+            <summary>
+            Deletes a room by ID.
+            </summary>
+            <param name="id">Unique room ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.RoomsController.RoomExists(System.Int32)">
+            <summary>
+            Checks if a room exists in the database.
+            </summary>
+            <param name="id">Unique room ID.</param>
+            <returns></returns>
+        </member>
+        <member name="T:HotelManager.Controllers.UserController">
+            <summary>
+            Manages users in the system.
+            </summary>
+        </member>
+        <member name="M:HotelManager.Controllers.UserController.#ctor(HotelManager.Data.ApplicationDbContext,Microsoft.AspNetCore.Identity.UserManager{HotelManager.Models.UserEmployee},Microsoft.AspNetCore.Identity.SignInManager{HotelManager.Models.UserEmployee},Microsoft.AspNetCore.Identity.RoleManager{Microsoft.AspNetCore.Identity.IdentityRole})">
+            <summary>
+            Creates a manager for roles, users and sign in.
+            </summary>
+            <param name="context">The database connection.</param>
+            <param name="userManager">Manager for users.</param>
+            <param name="signInManager">Manager for signing in.</param>
+            <param name="roleManager">Manager for roles.</param>
+        </member>
+        <member name="M:HotelManager.Controllers.UserController.Index">
+            <summary>
+            Shows all users that are contained in the database.
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.UserController.Details(System.String)">
+            <summary>
+            Shows the details of an existing user from the database by ID.
+            </summary>
+            <param name="id">Unique user ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.UserController.Create">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.UserController.Create(HotelManager.Views.User.ViewModel.User)">
+            <summary>
+            Adds a new user to the database.
+            </summary>
+            <param name="model">A model of an user.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.UserController.Edit(System.String)">
+            <summary>
+            Edits information about an user by ID.
+            </summary>
+            <param name="id">Unique user ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.UserController.Edit(HotelManager.Views.User.ViewModel.User)">
+            <summary>
+            Edits information about a reservation by given model.
+            </summary>
+            <param name="model">A model of an user.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.UserController.Delete(System.String)">
+            <summary>
+            Deletes an user by ID.
+            </summary>
+            <param name="id">Unique user ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.UserController.DeleteConfirmed(System.String)">
+            <summary>
+            Deletes an user by ID.
+            </summary>
+            <param name="id">Unique user ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.UserController.Promote(System.String)">
+            <summary>
+            Confirms that an user is an employee and gives access to information.
+            </summary>
+            <param name="userId">Unique hashed user ID.</param>
+            <returns></returns>
+        </member>
+        <member name="M:HotelManager.Controllers.UserController.Demote(System.String)">
+            <summary>
+            Declines that an user is an employee and takes access from information.
+            </summary>
+            <param name="userId">Unique hashed user ID.</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

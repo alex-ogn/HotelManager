@@ -1,0 +1,50 @@
+﻿using HotelManager.Models;
+using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Linq;
+using System.Threading.Tasks;
+
+namespace HotelManager.Views.User.ViewModel
+{
+    public class User : UserEmployee
+    
+    {
+        [Required]
+        [EmailAddress]
+        [Display(Name = "Email")]
+        [RegularExpression(@"^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$", ErrorMessage = "Invalid email")]
+        public string Email { get; set; }
+        [Display(Name = "Fisrt name")]
+        [Required]
+        public string FisrtName { get; set; }
+        [Display(Name = "Father name")]
+        [Required]
+       
+        public string FatherName { get; set; }
+        [Required]
+        [Display(Name = "Last name")]
+        public string LastName { get; set; }
+        [Required]
+        [RegularExpression(@"^(\d{10})$", ErrorMessage = "EGN number must consist of 10 digits.")]
+        public string EGN { get; set; }
+
+        [Display(Name = "Starting date")]
+
+        public DateTime StartingDate { get; set; }
+        [Display(Name = "Is user active")]
+
+        public bool ActiveUser { get; set; }
+        [Display(Name = "Phone number")]
+        [Required]
+        [RegularExpression(@"^(\d{10})$", ErrorMessage = "Telephone number number must consist of 10 digits.")]
+        public string PhoneNumber { get; set; }
+
+        [Required]
+        [StringLength(100, ErrorMessage = "The {0} must be at least {2} and at max {1} characters long.", MinimumLength = 6)]
+        [DataType(DataType.Password)]
+        [Display(Name = "Password")]
+        public string Password { get; set; }
+
+    }
+}
