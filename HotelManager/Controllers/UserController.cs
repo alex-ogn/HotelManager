@@ -43,8 +43,22 @@ namespace HotelManager.Controllers
         /// Shows all users that are contained in the database.
         /// </summary>
         /// <returns></returns>
-        public async Task<IActionResult> Index()
+        public async Task<IActionResult> Index(string search, string searchBy)
         {
+            //return View(await _context.Employee.ToListAsync());
+            if (search != null)
+            {
+                if (searchBy == "Phone")
+                {
+                    return View(await _context.UserEmployees.Where(x => x.PhoneNumber.StartsWith(search) || search == null)
+                        .ToListAsync());
+                }
+                else
+                {
+                    return View(await _context.UserEmployees.Where(x => (x.FisrtName + " " + x.LastName).StartsWith(search) || search == null)
+                        .ToListAsync());
+                }
+            }
             return View(await _context.UserEmployees.ToListAsync());
         }
 
